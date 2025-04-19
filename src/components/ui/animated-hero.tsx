@@ -1,75 +1,46 @@
-import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
-function Hero() {
-  const [titleNumber, setTitleNumber] = useState(0);
-  const titles = useMemo(
-    () => ["Inteligente", "Innovación", "Tecnología"],
-    []
-  );
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      if (titleNumber === titles.length - 1) {
-        setTitleNumber(0);
-      } else {
-        setTitleNumber(titleNumber + 1);
-      }
-    }, 5000);
-    return () => clearTimeout(timeoutId);
-  }, [titleNumber, titles]);
-
+export function Hero() {
   return (
-    <div className="w-full">
-      <div className="container mx-auto">
-        <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
-          <div className="flex gap-4 flex-col">
-            <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
-              <span className="text-spektr-cyan-50">Tecnoslab</span>
-              <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
-                &nbsp;
-                {titles.map((title, index) => (
-                  <motion.span
-                    key={index}
-                    className="absolute font-semibold"
-                    initial={{ opacity: 0, y: "-100" }}
-                    transition={{ type: "spring", stiffness: 50 }}
-                    animate={
-                      titleNumber === index
-                        ? {
-                            y: 0,
-                            opacity: 1,
-                          }
-                        : {
-                            y: titleNumber > index ? -150 : 150,
-                            opacity: 0,
-                          }
-                    }
-                  >
-                    {title}
-                  </motion.span>
-                ))}
-              </span>
-            </h1>
-
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
-              No hay piso que no podamos solucionar
-            </p>
-          </div>
-          <div className="flex flex-row gap-3">
-            <Button size="lg" className="gap-4" variant="outline">
-              Agenda tu llamada <PhoneCall className="w-4 h-4" />
-            </Button>
-            <Button size="lg" className="gap-4">
-              Únete a la comunidad <MoveRight className="w-4 h-4" />
-            </Button>
-          </div>
-        </div>
+    <section 
+      className="relative flex flex-col items-center justify-center text-center h-[80vh] bg-cover bg-center"
+      style={{ backgroundImage: "url('https://res.cloudinary.com/dy089iwsg/image/upload/v1745092430/1_loiwsy.jpg')" }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40" />
+      
+      {/* Content container */}
+      <div className="relative z-10 text-white px-4 md:px-6">
+        <motion.h1 
+          className="text-4xl md:text-6xl font-bold mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Tecnoslab Tecnología
+        </motion.h1>
+        <motion.p 
+          className="text-lg md:text-xl mb-8 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          No hay piso que no podamos solucionar
+        </motion.p>
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+            Agenda tu llamada
+          </button>
+          <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors">
+            Únete a la comunidad
+          </button>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
-
-export { Hero };
