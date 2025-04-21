@@ -12,14 +12,14 @@ const galleryData = {
       title: "Tecnoslab_MG",
       summary: "Repara tu piso en menos de 48 horas, sin necesidad de colados, con alta planicidad y a 1/5 del precio ofrecido en el mercado",
       url: "#",
-      image: "https://res.cloudinary.com/dy089iwsg/image/upload/v1745090297/MG_q7nqv3.png",
+      image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
       id: "item-2",
       title: "CogriGespap",
       summary: "Mediciones de piso para VNA y pasillos robóticos con garantía total. Tecnología avanzada que asegura precisión milimétrica, sin demoras ni errores.",
       url: "#",
-      image: "https://res.cloudinary.com/dy089iwsg/image/upload/v1745090154/Cogri_2_gia8pi.jpg",
+      image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
       id: "item-3",
@@ -34,21 +34,17 @@ const galleryData = {
 function HomeDemo() {
   return (
     <div className="min-h-screen w-full bg-white">
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 md:p-6 bg-white/80 backdrop-blur-sm">
+      <header className="flex items-center justify-between p-4 md:p-6">
         <img 
           src={Logo} 
           alt="Tecnoslab Logo" 
-          className="h-12 md:h-16" 
+          className="h-12 md:h-16 absolute top-4 left-4 md:top-6 md:left-6" 
         />
         <NavHeader />
       </header>
-      <div className="pt-24 md:pt-32">
-        <Hero />
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <Gallery6 {...galleryData} />
-          <BackgroundPaths title="Consulta hoy" />
-        </div>
-      </div>
+      <Hero />
+      <Gallery6 {...galleryData} />
+      <BackgroundPaths title="Innovación Tecnológica" />
     </div>
   );
 }
