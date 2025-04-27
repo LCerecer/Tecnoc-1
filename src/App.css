@@ -2,9 +2,7 @@
   width: 100%;
   margin: 0;
   text-align: center;
-  transform: scale(0.75);
-  transform-origin: top center;
-  height: 133.33vh;
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -12,28 +10,20 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  max-width: 1080px; /* Reduced from 1440px */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (min-width: 640px) {
+/* Responsive container sizes */
+@media (min-width: 1024px) and (max-width: 1536px) {
   .container {
-    max-width: 100%;
+    padding: 0 1.5rem; /* Reduced from 2rem */
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1023px) {
   .container {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 100%;
+    padding: 0 0.75rem; /* Reduced from 1rem */
   }
 }

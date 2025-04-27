@@ -1,45 +1,70 @@
-import * as React from "react";
-import { cn } from "@/lib/utils";
+import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 
-const NavHeader = () => {
+export default function NavHeader() {
+  const dropdowns = [
+    {
+      label: "Acerca de nosotros",
+      items: [
+        { label: "Historia", href: "#" },
+        { label: "Equipo", href: "#" },
+        { label: "Misión y Visión", href: "#" },
+      ],
+    },
+    {
+      label: "Productos",
+      items: [
+        { label: "Productos", href: "/productos" },
+        { label: "TecnoMG", href: "/productos" },
+        { label: "TecnoCM", href: "/productos" },
+      ],
+    },
+    {
+      label: "Servicios",
+      items: [
+        { label: "Tecnoslab MG", href: "/tecnoslab-mg" },
+        { label: "CogriGespap", href: "/cogrigespap" },
+        { label: "Consultoría", href: "#" },
+      ],
+    },
+    {
+      label: "Contáctanos",
+      items: [
+        { label: "Formulario de Contacto", href: "/contactanos" },
+        { label: "Ubicaciones", href: "#" },
+        { label: "Soporte Técnico", href: "#" },
+      ],
+    },
+  ];
+
   return (
-    <nav className="fixed top-0 right-0 p-6 z-50">
-      <ul className="relative flex w-fit min-w-[200px] gap-6 rounded-full border-2 border-black bg-white px-6 py-4 text-base">
-        <li>
-          <a
-            href="#tecnoslab"
-            className="text-black hover:text-gray-600 transition-colors duration-200 min-h-[40px] flex items-center justify-center text-[1rem] font-medium"
-          >
-            TECNOSLAB_MG
-          </a>
-        </li>
-        <li>
-          <a
-            href="#cogrigespap"
-            className="text-black hover:text-gray-600 transition-colors duration-200 min-h-[40px] flex items-center justify-center text-[1rem] font-medium"
-          >
-            COGRIGESPAP
-          </a>
-        </li>
-        <li>
-          <a
-            href="#consultorias"
-            className="text-black hover:text-gray-600 transition-colors duration-200 min-h-[40px] flex items-center justify-center text-[1rem] font-medium"
-          >
-            CONSULTORIAS
-          </a>
-        </li>
-        <li>
-          <a
-            href="#contactanos"
-            className="text-black hover:text-gray-600 transition-colors duration-200 min-h-[40px] flex items-center justify-center text-[1rem] font-medium"
-          >
-            CONTACTANOS
-          </a>
-        </li>
-      </ul>
+    <nav className="flex items-center gap-2">
+      {dropdowns.map((dropdown) => (
+        <DropdownMenu key={dropdown.label}>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="text-base">
+              {dropdown.label}
+              <ChevronDown className="ml-1 h-4 w-4 opacity-50" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="start">
+            {dropdown.items.map((item) => (
+              <DropdownMenuItem key={item.label} asChild>
+                <Link to={item.href} className="w-full">
+                  {item.label}
+                </Link>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      ))}
     </nav>
   );
-};
-
-export default NavHeader;
+}

@@ -1,8 +1,6 @@
 import { Hero } from "@/components/ui/animated-hero";
-import NavHeader from "@/components/ui/nav-header";
 import { Gallery6 } from "@/components/ui/gallery6";
 import { Cta11 } from "@/components/ui/cta11";
-import Logo from "@/components/Assets/Logo.svg";
 
 const galleryData = {
   heading: "Nuestros Servicios",
@@ -48,26 +46,13 @@ const ctaData = {
 
 function HomeDemo() {
   return (
-    <div className="min-h-screen w-full bg-white">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm px-0">
-        <div className="flex items-center justify-between w-full">
-          <img 
-            src={Logo} 
-            alt="Tecnoslab Logo" 
-            className="h-24 md:h-28 lg:h-32 w-auto" 
-          />
-          <NavHeader />
-        </div>
-      </header>
-      
-      <main className="pt-24 md:pt-28 lg:pt-32 w-full">
-        <div className="w-full">
-          <Hero />
-        </div>
+    <main className="pt-12 md:pt-16 w-full">
+      <div className="container mx-auto">
+        <Hero />
         <Gallery6 {...galleryData} />
         <Cta11 {...ctaData} />
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
 
