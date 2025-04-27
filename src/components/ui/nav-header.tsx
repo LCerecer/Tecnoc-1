@@ -1,70 +1,181 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 export default function NavHeader() {
-  const dropdowns = [
-    {
-      label: "Acerca de nosotros",
-      items: [
-        { label: "Historia", href: "#" },
-        { label: "Equipo", href: "#" },
-        { label: "Misión y Visión", href: "#" },
-      ],
-    },
-    {
-      label: "Productos",
-      items: [
-        { label: "Productos", href: "/productos" },
-        { label: "TecnoMG", href: "/productos" },
-        { label: "TecnoCM", href: "/productos" },
-      ],
-    },
-    {
-      label: "Servicios",
-      items: [
-        { label: "Tecnoslab MG", href: "/tecnoslab-mg" },
-        { label: "CogriGespap", href: "/cogrigespap" },
-        { label: "Consultoría", href: "#" },
-      ],
-    },
-    {
-      label: "Contáctanos",
-      items: [
-        { label: "Formulario de Contacto", href: "/contactanos" },
-        { label: "Ubicaciones", href: "#" },
-        { label: "Soporte Técnico", href: "#" },
-      ],
-    },
-  ];
-
   return (
-    <nav className="flex items-center gap-2">
-      {dropdowns.map((dropdown) => (
-        <DropdownMenu key={dropdown.label}>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="text-base">
-              {dropdown.label}
-              <ChevronDown className="ml-1 h-4 w-4 opacity-50" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="start">
-            {dropdown.items.map((item) => (
-              <DropdownMenuItem key={item.label} asChild>
-                <Link to={item.href} className="w-full">
-                  {item.label}
-                </Link>
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
-      ))}
-    </nav>
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Acerca de nosotros</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-6 w-[400px]">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/historia"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Historia
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/fundador"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Fundador
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Productos</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-6 w-[400px]">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/productos"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Descripción general
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/productos"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    TecnoMG
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/productos"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    TecnoCM
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Servicios</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-6 w-[400px]">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/servicios"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Mediciones de pisos
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/servicios"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Corrección y desbaste
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/servicios"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Ingeniería de pisos industriales
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/servicios"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Supervisión de pisos industriales
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Contáctanos</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-6 w-[400px]">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/contactanos"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Contacto
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/agenda-llamada"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Agenda una llamada
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/comunicacion-correo"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Comunicación por correo
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/preguntas-frecuentes"
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    Preguntas frecuentes
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
   );
 }

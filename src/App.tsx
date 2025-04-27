@@ -8,6 +8,9 @@ import AgendaLlamada from '@/pages/AgendaLlamada';
 import ComunicacionCorreo from '@/pages/ComunicacionCorreo';
 import PreguntasFrecuentes from '@/pages/PreguntasFrecuentes';
 import Productos from '@/pages/Productos';
+import Servicios from '@/pages/Servicios';
+import Historia from '@/pages/Historia';
+import Fundador from '@/pages/Fundador';
 import Layout from '@/components/Layout';
 import './App.css';
 
@@ -24,6 +27,9 @@ function App() {
         <Route path="/comunicacion-correo" element={<Layout><ComunicacionCorreo /></Layout>} />
         <Route path="/preguntas-frecuentes" element={<Layout><PreguntasFrecuentes /></Layout>} />
         <Route path="/productos" element={<Layout><Productos /></Layout>} />
+        <Route path="/servicios" element={<Layout><Servicios /></Layout>} />
+        <Route path="/historia" element={<Layout><Historia /></Layout>} />
+        <Route path="/fundador" element={<Layout><Fundador /></Layout>} />
       </Routes>
     </Router>
   );
