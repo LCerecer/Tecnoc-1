@@ -11,6 +11,7 @@ import Productos from '@/pages/Productos';
 import Servicios from '@/pages/Servicios';
 import Historia from '@/pages/Historia';
 import Fundador from '@/pages/Fundador';
+import Lista from '@/pages/Lista';
 import Layout from '@/components/Layout';
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/servicios" element={<Layout><Servicios /></Layout>} />
         <Route path="/historia" element={<Layout><Historia /></Layout>} />
         <Route path="/fundador" element={<Layout><Fundador /></Layout>} />
+        <Route path="/lista" element={<Layout><Lista /></Layout>} />
       </Routes>
     </Router>
   );

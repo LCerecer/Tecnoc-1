@@ -135,10 +135,10 @@ export default function NavHeader() {
               <li>
                 <NavigationMenuLink asChild>
                   <Link
-                    to="/contactanos"
+                    to="/lista"
                     className={navigationMenuTriggerStyle()}
                   >
-                    Contacto
+                    Únete a nuestra lista
                   </Link>
                 </NavigationMenuLink>
               </li>
