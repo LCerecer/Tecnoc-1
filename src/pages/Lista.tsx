@@ -1,10 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { supabase, type FormSubmission } from '@/lib/supabase';
+import { useToast } from '@/hooks/use-toast';
 
 export default function Lista() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<Omit<FormSubmission, 'form_type' | 'message'>>({
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('form_submissions')
+        .insert([{ ...formData, form_type: 'lista', message: '' }]);
+
+      if (error) throw error;
+
+      toast({
+        title: "¡Suscripción exitosa!",
+        description: "Te has suscrito correctamente a nuestra lista.",
+      });
+
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+      });
+    } catch (error) {
+      console.error('Error:', error);
+      toast({
+        title: "Error",
+        description: "Hubo un problema al procesar tu suscripción. Por favor, intenta de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -33,6 +78,9 @@ export default function Lista() {
                   required
                   type="text"
                   id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-black focus:border-transparent transition-colors"
                   placeholder="Tu nombre completo"
                 />
@@ -49,6 +97,9 @@ export default function Lista() {
                   required
                   type="text"
                   id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
                   className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-black focus:border-transparent transition-colors"
                   placeholder="Nombre de tu empresa"
                 />
@@ -65,6 +116,9 @@ export default function Lista() {
                   required
                   type="tel"
                   id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-black focus:border-transparent transition-colors"
                   placeholder="Tu número de teléfono"
                 />
@@ -81,6 +135,9 @@ export default function Lista() {
                   required
                   type="email"
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-black focus:border-transparent transition-colors"
                   placeholder="tu@email.com"
                 />
@@ -88,9 +145,10 @@ export default function Lista() {
 
               <button
                 type="submit"
-                className="w-full bg-black text-white rounded-md py-3 hover:bg-gray-800 transition-colors font-medium"
+                disabled={isSubmitting}
+                className="w-full bg-black text-white rounded-md py-3 hover:bg-gray-800 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Suscribirse
+                {isSubmitting ? 'Procesando...' : 'Suscribirse'}
               </button>
             </form>
           </div>
