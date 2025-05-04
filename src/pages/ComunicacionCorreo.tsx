@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { supabase, type FormSubmission } from '@/lib/supabase';
 import { useToast } from '@/hooks/use-toast';
+import { AnimatePresence } from 'framer-motion';
+import { SuccessAlert } from '@/components/ui/success-alert';
 
 export default function ComunicacionCorreo() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState<Omit<FormSubmission, 'form_type'>>({
     name: '',
     company: '',
@@ -29,10 +32,8 @@ export default function ComunicacionCorreo() {
 
       if (error) throw error;
 
-      toast({
-        title: "¡Mensaje enviado!",
-        description: "Nos pondremos en contacto contigo pronto.",
-      });
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 5000);
 
       setFormData({
         name: '',
@@ -58,6 +59,14 @@ export default function ComunicacionCorreo() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Comunicación por Correo</h1>
         <div className="max-w-2xl mx-auto bg-gray-50 rounded-lg p-8">
+          <AnimatePresence>
+            {showSuccess && (
+              <div className="mb-4">
+                <SuccessAlert message="¡Mensaje enviado exitosamente!" />
+              </div>
+            )}
+          </AnimatePresence>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">

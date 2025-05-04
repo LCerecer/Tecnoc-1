@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { supabase, type FormSubmission } from '@/lib/supabase';
 import { useToast } from '@/hooks/use-toast';
+import { SuccessAlert } from '@/components/ui/success-alert';
 
 export default function Lista() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState<Omit<FormSubmission, 'form_type' | 'message'>>({
     name: '',
     company: '',
@@ -29,10 +31,8 @@ export default function Lista() {
 
       if (error) throw error;
 
-      toast({
-        title: "¡Suscripción exitosa!",
-        description: "Te has suscrito correctamente a nuestra lista.",
-      });
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 5000);
 
       setFormData({
         name: '',
@@ -66,6 +66,14 @@ export default function Lista() {
           </h1>
 
           <div className="bg-white rounded-lg shadow-lg p-8">
+            <AnimatePresence>
+              {showSuccess && (
+                <div className="mb-4">
+                  <SuccessAlert message="¡Te has suscrito exitosamente!" />
+                </div>
+              )}
+            </AnimatePresence>
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label 
