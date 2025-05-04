@@ -4,22 +4,28 @@ export default function Fundador() {
   return (
     <div className="min-h-screen w-full bg-white pt-20">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Nuestro Fundador</h1>
-        <div className="max-w-3xl mx-auto bg-gray-50 rounded-lg p-8">
+        <h1 className="text-6xl font-bold text-gray-900 mb-8">Misión y Visión</h1>
+        <div className="max-w-3xl mx-auto bg-white rounded-lg p-8">
           <div className="flex flex-col items-center mb-8">
-            <img 
-              src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg"
-              alt="Fundador"
-              className="w-48 h-48 rounded-full object-cover mb-4"
-            />
-            <h2 className="text-2xl font-semibold text-gray-800">Nombre del Fundador</h2>
-            <p className="text-gray-600">CEO & Fundador</p>
+            <h2 className="text-5xl font-semibold text-gray-800">Misión</h2>
           </div>
-          <p className="text-gray-600 leading-relaxed">
-            Con más de dos décadas de experiencia en la industria, nuestro fundador 
-            ha liderado la innovación en el sector de pisos industriales, 
-            introduciendo tecnologías revolucionarias y estableciendo nuevos 
-            estándares de calidad en el mercado.
+          <p className="transform scale-125 text-gray-600 leading-relaxed">
+            Ofrecemos soluciones integrales para piso industrial que garantizan que cumpla con las especificaciones de planicidad y durabilidad requeridas por las tecnologías automatizadas de manejo de materiales a través de personal experto y tecnologías de medición y corrección de planicidad de última generación.
+          </p>
+           <div className="flex flex-col items-center mt-8">
+            <h2 className="text-5xl font-semibold text-gray-800">Visión</h2>
+          </div>
+          <p className="transform scale-125 text-lg text-lg text-gray-600 leading-relaxed mt-4 text-center">
+            Ser la primera opción de nuestros clientes para solucionar sus necesidades de diseño y planicidad de piso industrial.
+          </p>
+          <div className="flex flex-col items-center mt-8">
+            <h2 className="text-5xl font-semibold text-gray-800">Valores</h2>
+          </div>
+          <p className="transform scale-125 text-lg text-lg text-gray-600 leading-relaxed mt-4 text-center">
+•	Innovación.
+•	Confiabilidad.
+•	Experiencia.
+
           </p>
         </div>
       </div>

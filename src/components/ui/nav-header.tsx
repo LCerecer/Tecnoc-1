@@ -34,7 +34,7 @@ export default function NavHeader() {
                     to="/fundador"
                     className={navigationMenuTriggerStyle()}
                   >
-                    Fundador
+                    Misión, Visión y Valores
                   </Link>
                 </NavigationMenuLink>
               </li>
