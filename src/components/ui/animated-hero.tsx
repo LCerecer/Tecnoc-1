@@ -15,6 +15,18 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
+      {/* Individual Logos */}
+      <img
+        src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746397484/Group_weqjrf.png"
+        alt="CoGRi Group Logo"
+        className="absolute top-14 left-[20%] w-34 h-auto z-10"
+      />
+      <img
+        src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746399477/COGRI_GESPAP_bc1rbr.png"
+        alt="CoGRi GesPap Logo"
+        className="absolute top-14 left-[55%] w-1000 h-auto z-10"
+      />
+
       {/* Content Container */}
       <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -23,7 +35,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* New Motion Paragraph */}
+          {/* Motion Paragraph */}
           <motion.p
             className="text-xl sm:text-2xl lg:text-3xl text-white mb-8"
             initial={{ opacity: 0, y: 20 }}

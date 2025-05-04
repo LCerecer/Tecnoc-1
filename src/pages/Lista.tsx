@@ -53,7 +53,7 @@ export default function Lista() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#F5F5F5] pt-20">
+    <div className="min-h-screen w-full bg-white pt-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
