@@ -56,25 +56,11 @@ const block4Data = {
   ],
 };
 
-const block5Data = {
-  features: [
-    {
-      id: 1,
-      title: "Servicio 5",
-      summary: "Descripción breve del servicio 5.",
-      url: "#",
-      image:
-        "https://res.cloudinary.com/dy089iwsg/image/upload/v1746402855/Central_nocxiw.jpg",
-    },
-  ],
-};
-
 export default function Servicios() {
   const tecnoMGRef = useRef<HTMLDivElement>(null);
   const tecnoCMRef = useRef<HTMLDivElement>(null);
   const block3Ref = useRef<HTMLDivElement>(null);
   const block4Ref = useRef<HTMLDivElement>(null);
-  const block5Ref = useRef<HTMLDivElement>(null);
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -100,83 +86,70 @@ export default function Servicios() {
           </p>
         </div>
 
-        {/* 1st row: 3 blocks */}
-        <div className="grid grid-cols-3 gap-8 mb-12">
+        {/* 2 × 2 grid of blocks */}
+        <div className="grid grid-cols-2 gap-8 mb-12">
+          {/* TecnoMG */}
           <button
             onClick={() => scrollTo(tecnoMGRef)}
-            className="relative bg-white overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
+            className="relative overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
           >
             <img
               src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746402910/Central_sgsdkv.png"
               alt="TecnoMG"
-              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
             />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
               <h3 className="text-2xl font-bold text-white">TecnoMG</h3>
             </div>
           </button>
 
+          {/* TecnoCM */}
           <button
             onClick={() => scrollTo(tecnoCMRef)}
-            className="relative bg-white overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
+            className="relative overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
           >
             <img
               src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746402855/Central_nocxiw.jpg"
               alt="TecnoCM"
-              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
             />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
               <h3 className="text-2xl font-bold text-white">TecnoCM</h3>
             </div>
           </button>
 
+          {/* Servicio 3 */}
           <button
             onClick={() => scrollTo(block3Ref)}
-            className="relative bg-white overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
+            className="relative overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
           >
             <img
               src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746402855/Central_nocxiw.jpg"
               alt="Servicio 3"
-              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
             />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
               <h3 className="text-2xl font-bold text-white">Servicio 3</h3>
             </div>
           </button>
-        </div>
 
-        {/* 2nd row: 2 blocks */}
-        <div className="grid grid-cols-2 gap-8 mb-12">
+          {/* Servicio 4 */}
           <button
             onClick={() => scrollTo(block4Ref)}
-            className="relative bg-white overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
+            className="relative overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
           >
             <img
               src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746402855/Central_nocxiw.jpg"
               alt="Servicio 4"
-              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
             />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
               <h3 className="text-2xl font-bold text-white">Servicio 4</h3>
-            </div>
-          </button>
-
-          <button
-            onClick={() => scrollTo(block5Ref)}
-            className="relative bg-white overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
-          >
-            <img
-              src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746402855/Central_nocxiw.jpg"
-              alt="Servicio 5"
-              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <h3 className="text-2xl font-bold text-white">Servicio 5</h3>
             </div>
           </button>
         </div>
 
-        {/* Sections */}
+        {/* Sections for the remaining 4 services */}
         <div ref={tecnoMGRef} className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">TecnoMG</h2>
           <Feature197 {...tecnoMGData} />
@@ -195,11 +168,6 @@ export default function Servicios() {
         <div ref={block4Ref} className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Servicio 4</h2>
           <Feature197 {...block4Data} />
-        </div>
-
-        <div ref={block5Ref} className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Servicio 5</h2>
-          <Feature197 {...block5Data} />
         </div>
       </div>
     </div>
