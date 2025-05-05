@@ -72,7 +72,7 @@ export default function Servicios() {
 
         {/* Header Section */}
         <div className="bg-white rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <h2 className="text-5xl font-semibold text-gray-800 mb-4">
             Servicios
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed mb-4">
