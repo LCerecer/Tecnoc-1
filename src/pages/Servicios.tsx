@@ -101,7 +101,7 @@ export default function Servicios() {
               className="w-full h-64 object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h3 className="text-2xl font-bold text-white">TecnoMG</h3>
+              <h3 className="text-2xl font-bold text-white">Medicion de planicidad</h3>
             </div>
           </button>
 
@@ -121,7 +121,7 @@ export default function Servicios() {
               className="w-full h-64 object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h3 className="text-2xl font-bold text-white">TecnoCM</h3>
+              <h3 className="text-2xl font-bold text-white">Corrección y desbaste</h3>
             </div>
           </button>
 
@@ -141,7 +141,7 @@ export default function Servicios() {
               className="w-full h-64 object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h3 className="text-2xl font-bold text-white">Servicio 3</h3>
+              <h3 className="text-2xl font-bold text-white">Ingeniería de pisos industriales</h3>
             </div>
           </button>
 
@@ -161,7 +161,7 @@ export default function Servicios() {
               className="w-full h-64 object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h3 className="text-2xl font-bold text-white">Servicio 4</h3>
+              <h3 className="text-2xl font-bold text-white">Supervisión de pisos industriales</h3>
             </div>
           </button>
         </div>

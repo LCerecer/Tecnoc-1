@@ -69,7 +69,7 @@ export default function AgendaLlamada() {
               transition={{ duration: 0.3 }}
               className="max-w-md mx-auto"
             >
-              <form onSubmit={handleSubmit} className="bg-gray-50 rounded-lg p-8 space-y-6">
+              <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 space-y-6">
                 <AnimatePresence>
                   {showSuccess && (
                     <div className="mb-4">

@@ -58,7 +58,7 @@ export default function ComunicacionCorreo() {
     <div className="min-h-screen w-full bg-white pt-20">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Comunicación por Correo</h1>
-        <div className="max-w-2xl mx-auto bg-gray-50 rounded-lg p-8">
+        <div className="max-w-2xl mx-auto bg-white rounded-lg p-8">
           <AnimatePresence>
             {showSuccess && (
               <div className="mb-4">
@@ -138,6 +138,8 @@ export default function ComunicacionCorreo() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                placeholder={`¿En qué podemos ayudarte?
+Por favor, sé lo más detallado posible`}
                 rows={6}
                 className="w-full rounded-md border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-black focus:border-transparent"
               ></textarea>

@@ -100,7 +100,7 @@ export default function NavHeader() {
                     to="/servicios"
                     className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
                   >
-                    Mediciones de pisos
+                    Medicion de planicidad
                   </Link>
                 </NavigationMenuLink>
               </li>
