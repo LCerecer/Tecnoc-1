@@ -48,7 +48,7 @@ const tecnoCMData = {
       description: "Desarrollamos planes de corrección específicos para cada cliente, considerando las características únicas de su instalación y los requerimientos particulares de su operación.",
     }
   ],
-};
+}; 
 
 export default function Productos() {
   const tecnoMGRef = useRef<HTMLDivElement>(null);
@@ -64,11 +64,11 @@ export default function Productos() {
     <div className="min-h-screen w-full bg-white pt-20">
       <div className="container mx-auto px-4">
         <div className="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">¿Qué ofrece TecnoSlab?</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">¿Qué ofrece TECNOSLAB?</h2>
           <p className="text-gray-600 leading-relaxed">
             En TECNOSLAB somos expertos en la aplicación de productos especializados en la reparación y/o reconversión de piso industrial para obtener las más altas planicidades requeridas por los equipos de manejo de materiales más avanzados tales como sistemas ASRS, AMR o VNA.
 
-Contamos con productos que garantizan una alta resistencia al desgaste para evitar el deterioro generado por los equipos de manejo de materiales que circulan por rutas definidas concentrando la exposición al desgaste.
+Contamos con productos que garantizan una alta resistencia al desgaste para evitar el deterioro generado por los equipos de manejo de materiales que circulan por rutas definidas concentrando la exposición al desgaste.
           </p>
         </div>
 

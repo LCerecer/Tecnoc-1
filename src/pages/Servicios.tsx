@@ -83,14 +83,23 @@ export default function Servicios() {
   return (
     <div className="min-h-screen w-full bg-white pt-20">
       <div className="container mx-auto px-4">
+
+        {/* Header Section */}
         <div className="bg-white rounded-lg p-8 mb-12">
-  <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-    Servicios
-  </h2>
-  <p className="text-gray-600 leading-relaxed">
-    Tecnoslab ofrece soluciones especializadas en medición y corrección de planicidad para pisos industriales y robóticos. Realizamos mediciones bajo estándares internacionales como ASTM, ACI y normas específicas para sistemas VNA y robóticos, garantizando resultados precisos y confiables. Nuestro equipo técnico emplea perfilógrafos avanzados y tecnología láser para asegurar pisos con tolerancias mínimas adaptadas a cada cliente. Proporcionamos asesoría integral desde el diseño inicial hasta la certificación final del piso, optimizando la eficiencia operativa y reduciendo costos de mantenimiento. Somos expertos en sistemas automatizados y robóticos, incluyendo instalaciones exigentes como AutoStore, Amazon AMR y Geek+. En Tecnoslab transformamos los retos técnicos de planicidad en soluciones concretas que impulsan la productividad de tu negocio.
-  </p>
-</div>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Servicios
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed mb-4">
+            TECNOSLAB ofrece soluciones especializadas en medición y corrección de planicidad para pisos industriales y robóticos. Realizamos mediciones bajo estándares internacionales como ASTM, ACI y normas específicas para sistemas VNA y robóticos, garantizando resultados precisos y confiables.
+          </p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-4">
+            Nuestro equipo técnico emplea perfilógrafos avanzados y tecnología láser para asegurar pisos con tolerancias mínimas adaptadas a cada cliente. Proporcionamos asesoría integral desde el diseño inicial hasta la certificación final del piso, optimizando la eficiencia operativa y reduciendo costos de mantenimiento.
+          </p>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Somos expertos en sistemas automatizados y robóticos, incluyendo instalaciones exigentes como AutoStore, Amazon AMR y Geek+. En TECNOSLAB transformamos los retos técnicos de planicidad en soluciones concretas que impulsan la productividad de tu negocio.
+          </p>
+        </div>
+
         {/* 1st row: 3 blocks */}
         <div className="grid grid-cols-3 gap-8 mb-12">
           <button
