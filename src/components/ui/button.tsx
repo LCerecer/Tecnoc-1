@@ -47,6 +47,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
-Button.displayName = "Tecnoslab_MG";
+Button.displayName = "TECNOSLAB_MG";
 
 export { Button, buttonVariants };

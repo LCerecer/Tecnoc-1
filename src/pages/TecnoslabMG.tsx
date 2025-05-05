@@ -9,7 +9,7 @@ export default function TecnoslabMG() {
           <div className="bg-gray-50 rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Nuestra Presencia en Minas Gerais</h2>
             <p className="text-gray-600">
-              Tecnoslab MG representa nuestra división especializada en el estado de Minas Gerais, 
+              TECNOSLAB MG representa nuestra división especializada en el estado de Minas Gerais, 
               donde ofrecemos soluciones innovadoras para pisos industriales y servicios de 
               medición de alta precisión.
             </p>

@@ -10,10 +10,10 @@ export default function Historia() {
         </h1>
 
         {/* Limit the width so text never spills off page */}
-        <div className="max-w-4xl mx-auto bg-gray-50 rounded-lg p-8">
+        <div className="max-w-4xl mx-auto bg-white     rounded-lg p-8">
           {/* Paragraphs sized text-lg on mobile, text-xl on larger */}
           <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6">
-            Desde nuestra fundación, Tecnoslab ha estado a la vanguardia en soluciones 
+            Desde nuestra fundación, TECNOSLAB ha estado a la vanguardia en soluciones 
             para pisos industriales. Nuestra trayectoria comenzó con la visión de
             transformar la industria mediante tecnología innovadora y servicios de alta calidad.
           </p>

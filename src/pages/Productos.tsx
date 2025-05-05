@@ -63,7 +63,7 @@ export default function Productos() {
   return (
     <div className="min-h-screen w-full bg-white pt-20">
       <div className="container mx-auto px-4">
-        <div className="bg-gray-50 rounded-lg p-8 mb-12">
+        <div className="bg-white rounded-lg p-8 mb-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">¿Qué ofrece TECNOSLAB?</h2>
           <p className="text-gray-600 leading-relaxed">
             En TECNOSLAB somos expertos en la aplicación de productos especializados en la reparación y/o reconversión de piso industrial para obtener las más altas planicidades requeridas por los equipos de manejo de materiales más avanzados tales como sistemas ASRS, AMR o VNA.
