@@ -19,8 +19,7 @@ export default function Historia() {
           </p>
           <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
             A lo largo de los años, hemos expandido nuestras capacidades y experiencia, 
-            consolidándonos como líderes en el mercado de pisos industriales en Brasil 
-            y América Latina.
+            consolidándonos como líderes en el mercado de pisos industriales en México.
           </p>
 
           {/* LinkedIn Banner */}

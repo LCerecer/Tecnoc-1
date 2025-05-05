@@ -66,7 +66,9 @@ export default function Productos() {
         <div className="bg-gray-50 rounded-lg p-8 mb-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">¿Qué ofrece TecnoSlab?</h2>
           <p className="text-gray-600 leading-relaxed">
-            Tecnoslab ofrece soluciones especializadas en medición y corrección de planicidad para pisos industriales y robóticos. Realizamos mediciones bajo estándares internacionales como ASTM, ACI y normas específicas para sistemas VNA y robóticos, garantizando resultados precisos y confiables. Nuestro equipo técnico emplea perfilógrafos avanzados y tecnología láser para asegurar pisos con tolerancias mínimas adaptadas a cada cliente. Proporcionamos asesoría integral desde el diseño inicial hasta la certificación final del piso, optimizando la eficiencia operativa y reduciendo costos de mantenimiento. Somos expertos en sistemas automatizados y robóticos, incluyendo instalaciones exigentes como AutoStore, Amazon AMR y Geek+. En Tecnoslab transformamos los retos técnicos de planicidad en soluciones concretas que impulsan la productividad de tu negocio.
+            En TECNOSLAB somos expertos en la aplicación de productos especializados en la reparación y/o reconversión de piso industrial para obtener las más altas planicidades requeridas por los equipos de manejo de materiales más avanzados tales como sistemas ASRS, AMR o VNA.
+
+Contamos con productos que garantizan una alta resistencia al desgaste para evitar el deterioro generado por los equipos de manejo de materiales que circulan por rutas definidas concentrando la exposición al desgaste.
           </p>
         </div>
 
@@ -76,7 +78,7 @@ export default function Productos() {
             className="relative overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
           >
             <img 
-              src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" 
+              src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746402910/Central_sgsdkv.png" 
               alt="TecnoMG" 
               className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
             />
@@ -90,7 +92,7 @@ export default function Productos() {
             className="relative overflow-hidden rounded-lg group hover:shadow-xl transition-shadow duration-300"
           >
             <img 
-              src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" 
+              src="https://res.cloudinary.com/dy089iwsg/image/upload/v1746402855/Central_nocxiw.jpg" 
               alt="TecnoCM" 
               className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
             />
