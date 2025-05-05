@@ -14,18 +14,15 @@ export default function NavHeader() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {/* Acerca de nosotros */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-black hover:text-gray-700">
-            Acerca de nosotros
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Acerca de nosotros</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 w-[400px]">
               <li>
                 <NavigationMenuLink asChild>
                   <Link
                     to="/historia"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Historia
                   </Link>
@@ -35,7 +32,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/fundador"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Misión, Visión y Valores
                   </Link>
@@ -45,18 +42,15 @@ export default function NavHeader() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* Productos */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-black hover:text-gray-700">
-            Productos
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Productos</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 w-[400px]">
               <li>
                 <NavigationMenuLink asChild>
                   <Link
                     to="/productos"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Descripción general
                   </Link>
@@ -66,7 +60,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/productos"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     TecnoMG
                   </Link>
@@ -76,7 +70,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/productos"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     TecnoCM
                   </Link>
@@ -86,18 +80,15 @@ export default function NavHeader() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* Servicios */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-black hover:text-gray-700">
-            Servicios
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Servicios</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 w-[400px]">
               <li>
                 <NavigationMenuLink asChild>
                   <Link
                     to="/servicios"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Mediciones de pisos
                   </Link>
@@ -107,7 +98,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/servicios"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Corrección y desbaste
                   </Link>
@@ -117,7 +108,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/servicios"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Ingeniería de pisos industriales
                   </Link>
@@ -127,7 +118,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/servicios"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Supervisión de pisos industriales
                   </Link>
@@ -137,18 +128,15 @@ export default function NavHeader() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* Contáctanos */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-black hover:text-gray-700">
-            Contáctanos
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Contáctanos</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 w-[400px]">
               <li>
                 <NavigationMenuLink asChild>
                   <Link
                     to="/lista"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Únete a nuestra lista
                   </Link>
@@ -158,7 +146,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/agenda-llamada"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Agenda una llamada
                   </Link>
@@ -168,7 +156,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/comunicacion-correo"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Comunicación por correo
                   </Link>
@@ -178,7 +166,7 @@ export default function NavHeader() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/preguntas-frecuentes"
-                    className={`${navigationMenuTriggerStyle()} text-black hover:text-gray-700`}
+                    className={navigationMenuTriggerStyle()}
                   >
                     Preguntas frecuentes
                   </Link>
